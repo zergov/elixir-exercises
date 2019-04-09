@@ -11,14 +11,14 @@ defmodule Stackserver.Server do
   end
 
   def handle_call(:top, _from, [value | tail]) do
-    {:reply, value, [value | tail]}
+    {:reply, {:ok, value}, [value | tail]}
   end
 
   def handle_call(:pop, _from, [value | stack]) do
-    {:reply, value, stack}
+    {:reply, {:ok, value}, stack}
   end
 
   def handle_call(:inspect, _from, stack) do
-    {:reply, stack, stack}
+    {:reply, {:ok, stack}, stack}
   end
 end

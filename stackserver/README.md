@@ -25,17 +25,17 @@ $ Stackserver.push "tea"
 ### Pop value off the stack
 ```
 $ Stackserver.pop
->> "tea"
+>> {:ok, "tea"}
 ```
 
 ### inspect the stack
 ```
 $ Stackserver.inspect
->> [420, 1337, "coffee"]
+>> {:ok, [420, 1337, "coffee"]}
 ```
 
 ### top the stack
 ```
 $ Stackserver.inspect
->> 420
+>> {:ok, 420}
 ```

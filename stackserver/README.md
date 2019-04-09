@@ -12,30 +12,30 @@ $ iex -S mix
 
 ### Start the stack process
 ```
-$ Stackserver.start_link [420, 1337, "coffee"]
+iex(1)> Stackserver.start_link [420, 1337, "coffee"]
 >> {:ok, #PID<0.134.0>}
 ```
 
 ### Push value on the stack
 ```
-$ Stackserver.push "tea"
+iex(1)> Stackserver.push "tea"
 >> {:ok, ["tea", 420, 1337, "coffee"]}
 ```
 
 ### Pop value off the stack
 ```
-$ Stackserver.pop
+iex(1)> Stackserver.pop
 >> {:ok, "tea"}
 ```
 
 ### inspect the stack
 ```
-$ Stackserver.inspect
+iex(1)> Stackserver.inspect
 >> {:ok, [420, 1337, "coffee"]}
 ```
 
 ### top the stack
 ```
-$ Stackserver.inspect
+iex(1)> Stackserver.inspect
 >> {:ok, 420}
 ```

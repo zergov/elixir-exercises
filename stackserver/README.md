@@ -34,8 +34,8 @@ iex(1)> Stackserver.inspect
 >> {:ok, [420, 1337, "coffee"]}
 ```
 
-### top the stack
+### view top of the stack
 ```
-iex(1)> Stackserver.inspect
+iex(1)> Stackserver.top
 >> {:ok, 420}
 ```
